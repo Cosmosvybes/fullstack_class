@@ -19,8 +19,8 @@
 - height 
 - width
 - border and its variants.
-    
-   
-
+- box model (padding, margin, border)
+- display(inline, block, inline-block,grid,flex)
+- grid
 
 
