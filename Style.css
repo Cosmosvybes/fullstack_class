@@ -1,40 +1,55 @@
 .container {
   display: grid;
-  border: 2px dashed red;
+  border: 2px solid red;
   height: 100vh;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-    "header header header"
-    "item1 item2 item3"
-    "item4 item4 item4";
+    "header item_1 item_1"
+    "header item_2 item_3"
+    "header item_4 item_4";
 }
 
 #header {
-  border: 1px solid violet;
+  border: 1px solid green;
   width: 100%;
+  background-color: red;
   grid-area: header;
+  transition-property: transform;
+  transition-duration: 0.9s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+#header:hover {
+  /* transform: translateX(-10px); */
+  transform: rotate(360deg);
+  /* transform: skew(15deg, 20deg); */
+  /* transform: scale(1, 0); */
+  /* transform: scaleX(-1); */
+  /* transform: scaleY(0); */
 }
 .item_1 {
   border: 1px solid blue;
   width: 100%;
-  grid-area: item1;
+  grid-area: item_1;
 }
 
 .item_2 {
   border: 1px solid red;
-  width: 100%;
-  grid-area: item2;
+  /* width: 100%; */
+  grid-area: item_2;
 }
 
 .item_3 {
   border: 1px solid skyblue;
-  width: 100%;
-  grid-area: item3;
+  /* width: 100%; */
+  grid-area: item_3;
 }
 .item_4 {
   border: 1px solid brown;
-  width: 100%;
-  grid-area: item4;
+  /* width: 100%; */
+  grid-area: item_4;
 }
 @media screen and (max-width: 414px) {
   .container {

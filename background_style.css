@@ -1,3 +1,16 @@
-body {
-  background-color: chartreuse;
+#myBody {
+  background-image: url("./assets/images.jfif");
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+nav {
+  height: 50px;
+  background-color: lightgray;
+  border-top: 5px ridge red;
+}
+nav a {
+  color: black;
 }
