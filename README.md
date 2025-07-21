@@ -32,10 +32,12 @@
   -variables
   -Data values
   -Data types
-  -Operators
+  -Operators 
   -Problem solving & Algorithm
   - Control flow
   - Functions
+  -Scope and Closure
+  -DOM
 
 
 
