@@ -1,31 +1,87 @@
+* {
+  font-family: Arial,
+    Helvetica,
+    Open Sans,
+    Tahoma,
+    and Verdana;
+  margin: 0px;
+  padding: 0px;
+}
+
+#main {
+  background: #222 url(assets/surendran-mp-IhWYiwSxm8g-unsplash.jpg) no-repeat center/cover;
+  background-blend-mode: color-burn;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#submit-btn {
+  background-color: darkcyan;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 16px;
+  animation-name: fadeInUp;
+  animation-delay: 0ms;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+}
+
+#submit-btn:hover{
+  background-color: darkgoldenrod;
+  transform:  scale(1.05);
+  color: black;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+#input-value {
+  width: 300px;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  animation-name: fadeInright;
+  animation-duration: 0.8s;
+  animation-delay: 0ms;
+  animation-timing-function: ease-in-out;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px;
+  color: white;
+  animation-name: color;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0ms;
+  animation-iteration-count: infinite;
+}
+
+#head {
+  font-size: 40px;
+  animation-name: fadeInDown;
+  animation-delay: 0ms;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.8s;
+}
+
+h1 {
+  font-size: 24px;
+  color: whitesmoke;
+}
+
 #main {
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateX(-150px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-@keyframes slideOut {
-  from {
-    transform: translateY(-150px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
 
 #animate {
   animation-name: slideIn;
@@ -39,4 +95,91 @@
   animation-duration: 0.9s;
   animation-timing-function: ease-in-out;
   animation-delay: 0ms;
+}
+
+/* ANIMATION */
+@keyframes color {
+  0% {
+    color: cyan;
+  }
+
+  20% {
+    color: tomato;
+  }
+
+  40% {
+    color: blue;
+  }
+
+  60% {
+    color: red;
+  }
+
+  80% {
+    color: pink;
+  }
+
+  100% {
+    color: white;
+  }
+}
+
+@keyframes fadeInright {
+  from {
+    opacity: 0;
+    transform: translateX(290px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
