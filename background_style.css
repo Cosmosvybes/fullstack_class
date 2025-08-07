@@ -3,7 +3,7 @@
     Helvetica,
     Open Sans,
     Tahoma,
-    and Verdana;
+    Verdana;
   margin: 0px;
   padding: 0px;
 }
@@ -29,9 +29,9 @@
   animation-timing-function: ease-in-out;
 }
 
-#submit-btn:hover{
+#submit-btn:hover {
   background-color: darkgoldenrod;
-  transform:  scale(1.05);
+  transform: scale(1.05);
   color: black;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
