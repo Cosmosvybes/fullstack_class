@@ -29,7 +29,12 @@ function checkVowel(value) {
       // does the  aeiou includes any of the letters. ?
       vowelsFound.push(word[i]); // insert to the array vowelsFound if the vowel character  is found
     } else {
-      if (word[i] != " ") {
+      if (
+        word[i] != " " &&
+        word[i] != "'" &&
+        word[i] != "_" &&
+        word[i] != "$"
+      ) {
         consonantFound.push(word[i]); //  insert only consonant with no white-space;
       }
     }
