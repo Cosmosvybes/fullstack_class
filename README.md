@@ -10,6 +10,7 @@
  - Footer elements
  - Input Elements of type file 
  - Select Elements 
+ -Anchor and Buttons
  - Exercise of the Learning (Ass.)
 
 
@@ -22,5 +23,23 @@
 - box model (padding, margin, border)
 - display(inline, block, inline-block,grid,flex)
 - grid
+- Flexbox & Mobile view responsiveness
+- background-image and other properties
+- Position properties
+- Animation  and Transition
+
+  #### JAVASCRIPT 
+  -variables
+  -Data values
+  -Data types
+  -Operators 
+  -Problem solving & Algorithm (flowchart & Pseudo code)
+  - Control flow ( Sequential, conditional, iterational )
+  -var,let, const
+  - Functions
+  -Scope and Closure
+  -DOM  
 
 
+
+  
