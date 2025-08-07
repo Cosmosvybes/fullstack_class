@@ -5,3 +5,38 @@
   align-items: center;
   justify-content: center;
 }
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideOut {
+  from {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+#animate {
+  animation-name: slideIn;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0ms;
+}
+
+#output {
+  animation-name: slideOut;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0ms;
+}

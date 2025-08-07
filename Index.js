@@ -9,12 +9,11 @@ let output_ = document.querySelector("#output");
 submitBtn.addEventListener("click", function () {
   let inputValue = inputElem.value;
   let result = checkVowel(inputValue);
+
+  output_.id = output_.id != "animate" ? "animate" : "output";
   output_.innerHTML = result.join("-");
+  inputElem.value = "";
 }); // add event listener, of type click and callback;
-
-
-
-
 
 function checkVowel(value) {
   let word = value.toLowerCase();
