@@ -33,11 +33,13 @@
   -Data values
   -Data types
   -Operators 
-  -Problem solving & Algorithm
-  - Control flow
+  -Problem solving & Algorithm (flowchart & Pseudo code)
+  - Control flow ( Sequential, conditional, iterational )
+  -var,let, const
   - Functions
   -Scope and Closure
-  -DOM
+  -DOM  
 
 
 
+  

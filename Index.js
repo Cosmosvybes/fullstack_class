@@ -1,17 +1,34 @@
-// COMPARISON OPERATORS
-// e.g
-var a = 20;
-var b = "20";
+//  Function to check the vowels of any given word.
 
-// == : Which checks for equality between two values/ Operands.
-// != : Which checks for un-equality between two values/ operands.
-// === : Strictly checks for equality and the type of two values.
-// !== : Strictly checks for un-equality and the type of two values.
+let inputElem = document.querySelector("#input-value"); // querying the input html element.
 
-// console.log(a !== b);
+let submitBtn = document.querySelector("#submit-btn");
 
-//PROBLEM SOLVING & ALGORITHM
-// - Flow chart
+let output_ = document.querySelector("#output");
 
+submitBtn.addEventListener("click", function () {
+  let inputValue = inputElem.value;
+  let result = checkVowel(inputValue);
+  output_.innerHTML = result.join("-");
+}); // add event listener, of type click and callback;
 
 
+
+
+
+function checkVowel(value) {
+  let word = value.toLowerCase();
+
+  let vowelsFound = [];
+  let vowels = "aeiou";
+
+  for (let i = 0; i < word.length; i++) {
+    //checking  the vowels by iteration.
+    if (vowels.includes(word[i])) {
+      // does the  aeiou includes any of the letters. ?
+      vowelsFound.push(word[i]); // insert to the array vowelsFound if the vowel character  is found
+    }
+  }
+
+  return vowelsFound; //return the vowel charcters
+}
