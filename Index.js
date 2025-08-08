@@ -45,5 +45,5 @@ function checkVowel(value) {
     vowelMessage: "This are the vowels",
     consonantMessage: "This are the consonant",
     consonant: consonantFound.join(", "),
-  }; //return the vowel charcters
+  }; //return the vowel characters
 }
