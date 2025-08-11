@@ -1,4 +1,4 @@
-* {
+/* * {
   font-family: Arial,
     Helvetica,
     Open Sans,
@@ -95,7 +95,7 @@ h1 {
   animation-duration: 0.9s;
   animation-timing-function: ease-in-out;
   animation-delay: 0ms;
-}
+} */
 
 /* ANIMATION */
 @keyframes color {
@@ -182,4 +182,14 @@ h1 {
     transform: translateY(0px);
     opacity: 1;
   }
+}
+
+#main {
+  float: left;
+}
+#task-section {
+  float: left;
+  width: 50vw;
+  height: 100vh;
+  border: 1px solid black;
 }

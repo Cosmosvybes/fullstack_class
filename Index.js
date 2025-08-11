@@ -1,49 +1,50 @@
-//  Function to check the vowels of any given word.
+//  DOM
 
-let inputElem = document.querySelector("#input-value"); // querying the input html element.
+// let divElement = document.querySelector("#main");
 
-let submitBtn = document.querySelector("#submit-btn");
-
-let output_ = document.querySelector("#output");
+let userInput = document.querySelector("#user_input");
+let submitBtn = document.querySelector("#submit_btn");
+let task_list = document.querySelector("#task_list");
 
 submitBtn.addEventListener("click", function () {
-  let inputValue = inputElem.value;
-  let result = checkVowel(inputValue);
+  if (!userInput.value) {
+    console.log("Enter a value"); //return a warning if there is no input
+  } else {
 
-  const { vowelMessage, consonantMessage, consonant, vowels } = result;
-  output_.id = output_.id != "animate" ? "animate" : "output";
-  output_.innerHTML = `${vowelMessage} : ${vowels} <br/> ${consonantMessage}: ${consonant}`;
-  inputElem.value = "";
-}); // add event listener, of type click and callback;
+    
+    let liElem = document.createElement("li"); //created a li element
+    let delBtn = document.createElement("button"); // created a button - delete
+    let editBtn = document.createElement("button"); // created a button - edit
+    delBtn.textContent = "del"; // set the textContent
+    editBtn.textContent = "edit";
 
-function checkVowel(value) {
-  let word = value.toLowerCase();
+    liElem.textContent = userInput.value; //set the text content of the li
+    liElem.appendChild(editBtn); // we appended the button
+    liElem.appendChild(delBtn); // we appended the button
+    task_list.appendChild(liElem); // we appended the li into the ul
+    userInput.value = "";
 
-  let vowelsFound = [];
-  let consonantFound = [];
-  let vowels = "aeiou";
 
-  for (let i = 0; i < word.length; i++) {
-    //checking  the vowels by iteration.
-    if (vowels.includes(word[i])) {
-      // does the  aeiou includes any of the letters. ?
-      vowelsFound.push(word[i]); // insert to the array vowelsFound if the vowel character  is found
-    } else {
-      if (
-        word[i] != " " &&
-        word[i] != "'" &&
-        word[i] != "_" &&
-        word[i] != "$"
-      ) {
-        consonantFound.push(word[i]); //  insert only consonant with no white-space;
-      }
-    }
+    delBtn.addEventListener("click", function () {
+      let parent = liElem;
+      task_list.removeChild(parent);
+    });
+
+    //edit func
+    editBtn.addEventListener("click", function () {
+      let inputElem = document.createElement("input");
+      let saveBtn = document.createElement("button");
+      saveBtn.textContent = "save task";
+      inputElem.value = liElem.textContent;
+      liElem.textContent = "";
+      liElem.appendChild(inputElem);
+      liElem.appendChild(saveBtn);
+
+      saveBtn.addEventListener("click", function () {
+        liElem.textContent = inputElem.value;
+        liElem.appendChild(editBtn);
+        liElem.appendChild(delBtn);
+      });
+    });
   }
-
-  return {
-    vowels: vowelsFound.join(", "),
-    vowelMessage: "This are the vowels",
-    consonantMessage: "This are the consonant",
-    consonant: consonantFound.join(", "),
-  }; //return the vowel characters
-}
+});
