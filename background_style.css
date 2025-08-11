@@ -214,9 +214,9 @@ input[type="checkbox"]:checked+span {
   color: gray;
 }
 
-input[type="text"] {
+textarea {
   width: 200px;
-  padding: 50px 10px;
+  padding: 20px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   line-height: 1.5;
@@ -224,17 +224,17 @@ input[type="text"] {
   margin: 10px;
 }
 
-input[type="text"]:focus {
+textarea:focus {
   outline: none;
   border-color: darkcyan;
 }
 
-input[type="text"]:hover {
+textarea:hover {
   border-color: darkgoldenrod;
   transition: border-color 0.3s ease-in-out;
 }
 
-input[type="text"]::placeholder {
+textarea::placeholder {
   color: #aaa;
   font-style: italic;
 }
