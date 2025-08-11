@@ -187,9 +187,106 @@ h1 {
 #main {
   float: left;
 }
+
 #task-section {
   float: left;
   width: 50vw;
   height: 100vh;
   border: 1px solid black;
+}
+
+* {
+  font-family: Arial,
+    Helvetica,
+    Open Sans,
+    Tahoma,
+    Verdana;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked+span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+input[type="text"] {
+  width: 200px;
+  padding: 50px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  line-height: 1.5;
+  font-size: 16px;
+  margin: 10px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: darkcyan;
+}
+
+input[type="text"]:hover {
+  border-color: darkgoldenrod;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.submit {
+  background-color: darkcyan;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.submit:hover {
+  background-color: darkgoldenrod;
+  color: black;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+
+.delete {
+  background-color: rgb(226, 5, 5);
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit {
+  background-color: darkcyan;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+li {
+  padding: 10px 30px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
