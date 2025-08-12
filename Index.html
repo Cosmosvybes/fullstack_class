@@ -10,15 +10,37 @@
   </head>
 
   <body>
-    <div id="main">
-      <textarea id="user_input" placeholder="Enter your task"></textarea>
-      <button id="submit_btn">Submit Task</button>
+    <div class="container">
+      <div id="main">
+        <h2>Task-Tracker</h2>
+        <div class="flex">
+          <div class="center">
+            <textarea id="user_input" placeholder="Enter your task"></textarea>
+            <button id="submit_btn">Submit Task 📤</button>
+          </div>
+          <img
+            class="to-do"
+            src="/assets/eden-constantino-iJg1YzsEfqo-unsplash.jpg"
+            alt="image"
+          />
+        </div>
+      </div>
+
+      <div id="task_sections">
+        <section id="task-section">
+          <h2>Tasks</h2>
+          <ul id="task_list"></ul>
+        </section>
+
+        <section id="completed-tasks">
+          <h2>Completed Tasks</h2>
+          <ul id="completed_list"></ul>
+        </section>
+      </div>
     </div>
-
-    <section id="task-section">
-      <ul id="task_list"></ul>
-    </section>
-
+    <footer>
+      <p>&copy ayomidade 2025</p>
+    </footer>
     <script type="text/javascript" src="Index.js"></script>
   </body>
 </html>

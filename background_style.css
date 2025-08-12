@@ -184,15 +184,76 @@ h1 {
   }
 }
 
+.center {
+  display: flex;
+  flex-direction: column;
+}
+
 #main {
-  float: left;
+  /* float: left; */
+
+  background-color: whitesmoke;
+  background: url(/assets/kelly-sikkema--1_RZL8BGBM-unsplash.jpg) no-repeat center/cover;
+  background-blend-mode: color-burn;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* rgb(231, 231, 231) */
+}
+
+#main h2 {
+  background-color: firebrick;
+  color: floralwhite;
+  border-radius: 0px;
+  font-size: 26px;
+}
+
+.flex {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+  gap: 50px;
 }
 
 #task-section {
-  float: left;
   width: 50vw;
   height: 100vh;
-  border: 1px solid black;
+  border: 1px solid #aaa;
+  border-radius: 15px;
+  padding: 0px;
+  background-color: snow;
+}
+
+h2 {
+  text-align: center;
+  color: floralwhite;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  background-color: firebrick;
+  border-bottom: 1px solid #aaa;
+  border-radius: 15px;
+}
+
+#task_sections {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5px;
+  margin: 10px 5px;
+}
+
+#completed-tasks {
+  width: 50vw;
+  height: 100vh;
+  border: 1px solid #aaa;
+  border-radius: 15px;
+  padding: 0px;
+  background-color: peachpuff;
+}
+
+#completed-tasks li {
+  background-color: whitesmoke;
 }
 
 * {
@@ -201,9 +262,12 @@ h1 {
     Open Sans,
     Tahoma,
     Verdana;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -212,16 +276,24 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked+span {
   text-decoration: line-through;
   color: gray;
+} */
+
+.to-do {
+  width: 40%;
+  /* height: auto; */
+  border-radius: 10px;
 }
 
 textarea {
-  width: 200px;
-  padding: 20px 10px;
+  width: 300px;
+  height: 100px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  line-height: 1.5;
   font-size: 16px;
   margin: 10px;
+  resize: none;
+  /* Prevent resizing */
 }
 
 textarea:focus {
@@ -275,18 +347,48 @@ textarea::placeholder {
   cursor: pointer;
 }
 
+.complete {
+  background-color: darkgreen;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 li {
   padding: 10px 30px;
   margin: 5px;
-  background-color: #f0f0f0;
+  background-color: bisque;
   border-radius: 5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 10px;
+  gap: 9px
 }
 
 ul {
   padding: 0;
   margin: 0;
+}
+
+/* .container {
+  background-color: whitesmoke;
+} */
+
+.save {
+  background-color: darkcyan;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  background-color: rgb(175, 67, 67);
+  padding: 5px;
+  color: floralwhite;
 }
