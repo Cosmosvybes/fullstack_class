@@ -1,64 +1,39 @@
-.container {
-  display: grid;
-  border: 2px solid red;
-  height: 100vh;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-    "header item_1 item_1"
-    "header item_2 item_3"
-    "header item_4 item_4";
+p {
+  animation: fadeInRight 0.6s ease-in-out 0ms;
 }
 
-#header {
-  border: 1px solid green;
-  width: 100%;
-  background-color: red;
-  grid-area: header;
-  transition-property: transform;
-  transition-duration: 0.9s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s;
-  animation-iteration-count: infinite;
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 3px;
+  cursor: pointer;
 }
 
-#header:hover {
-  /* transform: translateX(-10px); */
-  transform: rotate(360deg);
-  /* transform: skew(15deg, 20deg); */
-  /* transform: scale(1, 0); */
-  /* transform: scaleX(-1); */
-  /* transform: scaleY(0); */
-}
-.item_1 {
-  border: 1px solid blue;
-  width: 100%;
-  grid-area: item_1;
-}
+/* .out{
+  animation: fadeOutLeft 1s ease-in-out 0ms;
+} */
 
-.item_2 {
-  border: 1px solid red;
-  /* width: 100%; */
-  grid-area: item_2;
-}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px)
+  }
 
-.item_3 {
-  border: 1px solid skyblue;
-  /* width: 100%; */
-  grid-area: item_3;
-}
-.item_4 {
-  border: 1px solid brown;
-  /* width: 100%; */
-  grid-area: item_4;
-}
-@media screen and (max-width: 414px) {
-  .container {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-areas:
-      "header"
-      "item1"
-      "item2"
-      "item3"
-      "item4";
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
+
+/* 
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0px)
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100px)
+  }
+} */

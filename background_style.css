@@ -249,7 +249,7 @@ h2 {
   padding: 3px;
   background-color: peachpuff;
   min-height: 40vh;
-    max-height: 100vh;
+  max-height: 100vh;
 }
 
 #completed-tasks li {
@@ -388,18 +388,19 @@ li {
   display: flex;
   align-items: center;
   gap: 9px;
-  max-height: 100px;
-    overflow-y: scroll;
-
+  height: 200px;
+  overflow-y: scroll;
+/* position:relative; */
+scrollbar-width:none;
 }
 
 ul {
-  max-height: 100vh;
-  overflow: scroll;
+  max-height: auto;
+  /* position: relative */
 }
 
 .container {
-  background-color: mistyrose;
+  background-color: rgb(150, 77, 69);
 }
 
 .save {
@@ -480,3 +481,33 @@ footer {
     overflow: scroll;
   }
 }
+/* 
+submitBtn.addEventListener("click", ()=> {
+    if ( !Object.values(objectDetails).includes(objProperty.value)) {
+      //if property does not already exist
+      list.textContent="";
+
+      //assigning both the key and it value to their respective position in the object
+      objectDetails[objProperty.value]=objValue.value; //object[key]=value
+      // return;
+
+      //putting the array of the key/values in the object(objectDetials) in a variable
+      let objPropandValue=Object.entries(objectDetails);
+
+      //clear out the input bar
+      objProperty.value="";
+      objValue.value="";
+
+      //Using the forEach method to create a li for each element in the array
+      objPropandValue.forEach((element)=> {
+          let myLi=document.createElement("li");
+          myLi.textContent=element.join(": ");
+          list.appendChild(myLi);
+
+          // console.log(element.join());
+        });
+      return;
+    }
+
+    alert("Property already exist");
+  }); */
